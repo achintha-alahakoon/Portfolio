@@ -1,51 +1,60 @@
+import Image from "next/image";
+
 export default function HomePage() {
   return (
-    <section className="mx-auto flex max-w-5xl flex-col gap-10 px-6 py-16 md:flex-row md:items-center">
-      <div className="flex-1 space-y-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
-          Portfolio
-        </p>
-        <h1 className="text-4xl font-semibold tracking-tight text-slate-50 md:text-5xl">
-          Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">
-            Achintha Alahakoon
+    <section className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col items-center justify-center gap-14 px-6 py-20 md:flex-row md:items-center md:justify-between">
+      <div className="flex-1 space-y-8">
+      <h1 className="text-center text-5xl font-semibold tracking-tight text-slate-50 md:text-6xl lg:text-6xl">
+  Hi, I&apos;m <br />
+  <span className="bg-gradient-to-r from-sky-400 via-emerald-300 to-indigo-400 bg-clip-text text-transparent">
+    Achintha Alahakoon
+  </span>
+</h1>
+        <p className="max-w-2xl text-lg leading-relaxed text-slate-200 md:text-xl">
+          An aspiring {" "}
+          <span className="font-semibold text-sky-300">
+            AI and Full-Stack engineer
           </span>
-        </h1>
-        <p className="max-w-xl text-sm leading-relaxed text-slate-300 md:text-base">
-          Front-end developer focused on building clean, modern, and responsive
-          web experiences. This portfolio highlights my favorite projects and
-          how to get in touch.
+          , with a strong interest in building{" "}
+          <span className="font-semibold text-emerald-300">
+            scalable web applications
+          </span>
+          , and{" "}
+          <span className="font-semibold text-violet-300">
+            intelligent solutions
+          </span>
+          , using{" "}
+          <span className="font-semibold text-amber-300">
+            modern technologies
+          </span>
+          .
         </p>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-4">
           <a
             href="/projects"
-            className="rounded-full bg-sky-500 px-5 py-2 text-sm font-medium text-slate-950 shadow-sm transition hover:bg-sky-400"
+            className="rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-md transition hover:bg-sky-400"
           >
             View Projects
           </a>
           <a
             href="/contact"
-            className="rounded-full border border-slate-700 px-5 py-2 text-sm font-medium text-slate-100 transition hover:border-slate-500"
+            className="rounded-full border border-slate-600/80 px-6 py-3 text-base font-semibold text-slate-50 transition hover:border-sky-400"
           >
             Contact Me
           </a>
         </div>
       </div>
 
-      <div className="mt-8 flex flex-1 justify-center md:mt-0">
-        <div className="relative h-52 w-52 overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-900 shadow-xl">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(56,189,248,0.18),transparent_60%),radial-gradient(circle_at_80%_0%,rgba(129,140,248,0.18),transparent_55%)]" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <span className="text-xs font-medium uppercase tracking-[0.25em] text-slate-400">
-              Based in
-            </span>
-            <span className="mt-1 text-sm font-semibold text-slate-100">
-              Sri Lanka
-            </span>
-            <span className="mt-4 rounded-full bg-slate-900/80 px-3 py-1 text-[11px] font-medium text-slate-200">
-              Front-end Developer
-            </span>
-          </div>
+      <div className="mt-10 flex flex-1 justify-center md:mt-0">
+        <div className="relative h-72 w-72 overflow-hidden rounded-3xl border border-sky-500/30 bg-slate-900 shadow-2xl md:h-80 md:w-80">
+          <Image
+            src="/Images/homepic.jpg"
+            alt="Portrait of Achintha Alahakoon"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 rounded-3xl ring-2 ring-sky-400/60" />
         </div>
       </div>
     </section>
