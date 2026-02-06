@@ -1,7 +1,10 @@
 import Link from "next/link";
 
 const navItems = [
-  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/experience", label: "Experience" },
+  { href: "/education", label: "Education" },
+  { href: "/courses", label: "Courses" },
   { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
 ];
@@ -51,7 +54,7 @@ const socialLinks = [
 export default function Navbar() {
   return (
     <header className="border-b border-slate-800 bg-slate-950/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center py-6">
         
         {/* LEFT: Name */}
         <div className="flex-1">
