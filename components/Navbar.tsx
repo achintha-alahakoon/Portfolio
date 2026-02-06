@@ -53,20 +53,20 @@ const socialLinks = [
 
 export default function Navbar() {
   return (
-    <header className="border-b border-sky-500/20 bg-slate-950/80 backdrop-blur shadow-md">
-      <div className="mx-auto flex max-w-7xl items-center px-6 py-5">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center py-6">
         
         {/* LEFT: Name */}
         <div className="flex-1">
-          <Link href="/" className="text-xl font-semibold tracking-tight md:text-2xl">
-            <span className="rounded-xl bg-slate-100 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-slate-900">
+          <Link href="/" className="text-lg font-semibold tracking-tight">
+            <span className="rounded bg-slate-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.2em] text-slate-900">
               Achintha Alahakoon
             </span>
           </Link>
         </div>
 
         {/* CENTER: Nav links */}
-        <nav className="flex flex-1 justify-center gap-6 text-base font-medium text-slate-200 md:gap-8 md:text-lg">
+        <nav className="flex flex-1 justify-center gap-6 text-lr font-medium text-slate-200">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -79,7 +79,7 @@ export default function Navbar() {
         </nav>
 
         {/* RIGHT: Social icons */}
-        <div className="flex flex-1 justify-end items-center gap-3 text-slate-200">
+        <div className="flex flex-1 justify-end items-center gap-3 text-slate-400">
           {socialLinks.map((social) => (
             <a
               key={social.label}
@@ -87,7 +87,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label={social.label}
-              className="rounded-full border border-slate-700/80 bg-slate-900/70 p-1.5 text-slate-300 transition hover:border-sky-400 hover:bg-slate-900 hover:text-sky-300"
+              className="rounded-full border border-slate-800 bg-slate-900/60 p-1.5 text-slate-400 transition hover:border-sky-500/70 hover:bg-slate-900 hover:text-sky-400"
             >
               {social.icon}
             </a>

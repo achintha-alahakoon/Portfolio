@@ -31,9 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-slate-50`}
       >
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col pt-20 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950">
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950">{children}</main>
           <footer className="border-t border-slate-800 bg-slate-950/95">
             <div className="mx-auto flex max-w-5xl justify-center px-6 py-4 text-xs text-slate-500">
               <span>
