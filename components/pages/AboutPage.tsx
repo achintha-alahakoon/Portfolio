@@ -4,7 +4,7 @@ import AboutTimeline from "../AboutTimeline";
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-16 space-y-20">
+    <main className="mx-auto max-w-5xl px-6 py-16 space-y-16">
       <AboutIntro />
       <AboutDetails />
       <AboutTimeline />
