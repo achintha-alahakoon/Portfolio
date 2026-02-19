@@ -1,3 +1,4 @@
+import ServicesSection from "../ServicesSection";
 import {
   SiHtml5,
   SiCss3,
@@ -121,6 +122,7 @@ export default function TechStackPage() {
           </div>
         ))}
       </section>
+      <ServicesSection />
     </main>
   );
 }

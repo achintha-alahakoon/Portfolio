@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+// Data
 const experiences = [
   {
     role: "Intern - Software Engineer",
