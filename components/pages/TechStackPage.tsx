@@ -1,68 +1,70 @@
-const techStack = [
-    {
-      category: "Programming Languages",
-      items: ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
-    },
-    {
-      category: "Frameworks & Libraries",
-      items: ["React", "Next.js", "Spring Boot", "Tailwind CSS", "Node.js"],
-    },
-    {
-      category: "Databases",
-      items: ["MySQL", "PostgreSQL"],
-    },
-    {
-      category: "Cloud & DevOps",
-      items: ["Microsoft Azure", "Docker", "GitHub Actions"],
-    },
-    {
-      category: "Tools & Platforms",
-      items: ["Git", "Postman", "SonarQube", "Figma"],
-    },
-    {
-      category: "AI / Machine Learning",
-      items: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy"],
-    },
-  ];
-  
-  export default function TechStackPage() {
-    return (
-      <main className="mx-auto max-w-5xl px-6 py-16">
-        <header className="mb-10 space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
-            Tech Stack
-          </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-slate-50 md:text-4xl">
-            Technologies I Work With
-          </h1>
-          <p className="max-w-3xl text-sm text-slate-300 md:text-base">
-            A collection of tools, frameworks, and technologies I use to build
-            scalable web applications and intelligent systems.
-          </p>
-        </header>
-  
-        <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {techStack.map((group) => (
-            <div
-              key={group.category}
-              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-            >
-              <h2 className="mb-3 text-sm font-semibold text-slate-50">
-                {group.category}
-              </h2>
-              <ul className="space-y-2 text-sm text-slate-300">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-indigo-400"
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiSpringboot,
+  SiTailwindcss,
+  SiPython,
+} from "react-icons/si";
+
+const techGroups = [
+  {
+    title: "Frontend & Backend Development",
+    items: [
+      { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
+      { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
+      { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+      { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
+      { name: "React", icon: SiReact, color: "text-cyan-400" },
+      { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+      { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+      { name: "Spring Boot", icon: SiSpringboot, color: "text-green-400" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-sky-400" },
+      { name: "Python", icon: SiPython, color: "text-yellow-300" },
+    ],
+  },
+];
+
+export default function TechStackPage() {
+  return (
+    <main className="mx-auto max-w-6xl px-6 py-16">
+      <header className="mb-12 text-center space-y-3">
+        <h1 className="text-4xl font-semibold text-slate-50">
+          Tools & Technologies
+        </h1>
+        <p className="text-slate-400">
+          I love using modern tools to build scalable and intelligent systems.
+        </p>
+      </header>
+
+      <section className="space-y-14">
+        {techGroups.map((group) => (
+          <div key={group.title}>
+            <h2 className="mb-6 text-center text-lg font-semibold text-slate-200">
+              {group.title}
+            </h2>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              {group.items.map((tech) => {
+                const Icon = tech.icon;
+                return (
+                  <div
+                    key={tech.name}
+                    className="flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-4 py-2 text-sm text-slate-200 hover:border-indigo-500 transition"
                   >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                    <Icon className={`text-lg ${tech.color}`} />
+                    {tech.name}
+                  </div>
+                );
+              })}
             </div>
-          ))}
-        </section>
-      </main>
-    );
-  }
+          </div>
+        ))}
+      </section>
+    </main>
+  );
+}
