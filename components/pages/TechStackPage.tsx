@@ -9,11 +9,24 @@ import {
   SiSpringboot,
   SiTailwindcss,
   SiPython,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiPandas,
+  SiNumpy,
+  SiScikitlearn,
+  SiTensorflow,
+  SiPytorch,
+  SiTableau,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiDocker,
 } from "react-icons/si";
 
 const techGroups = [
   {
-    title: "Frontend & Backend Development",
+    title: "Frontend Development",
     items: [
       { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
       { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
@@ -21,10 +34,53 @@ const techGroups = [
       { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
       { name: "React", icon: SiReact, color: "text-cyan-400" },
       { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-sky-400" },
+    ],
+  },
+  {
+    title: "Backend Development",
+    items: [
       { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
       { name: "Spring Boot", icon: SiSpringboot, color: "text-green-400" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-sky-400" },
       { name: "Python", icon: SiPython, color: "text-yellow-300" },
+    ],
+  },
+  {
+    title: "Databases",
+    items: [
+      { name: "MySQL", icon: SiMysql, color: "text-blue-400" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "text-indigo-400" },
+      { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+    ],
+  },
+  {
+    title: "AI & Machine Learning",
+    items: [
+      { name: "Pandas", icon: SiPandas, color: "text-indigo-400" },
+      { name: "NumPy", icon: SiNumpy, color: "text-cyan-300" },
+      { name: "Scikit-learn", icon: SiScikitlearn, color: "text-orange-400" },
+      { name: "TensorFlow", icon: SiTensorflow, color: "text-orange-500" },
+      { name: "PyTorch", icon: SiPytorch, color: "text-red-400" },
+    ],
+  },
+  {
+    title: "Data Analytics & BI",
+    items: [
+      { name: "Tableau", icon: SiTableau, color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    items: [
+      { name: "Docker", icon: SiDocker, color: "text-sky-400" },
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      { name: "Git", icon: SiGit, color: "text-orange-500" },
+      { name: "GitHub", icon: SiGithub, color: "text-white" },
+      { name: "Postman", icon: SiPostman, color: "text-orange-400" },
     ],
   },
 ];
