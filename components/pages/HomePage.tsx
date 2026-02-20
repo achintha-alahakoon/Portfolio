@@ -42,13 +42,16 @@ export default function HomePage() {
           </span>
           .
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-6">
+          {/* Gradient button */}
           <a
             href="/projects"
-            className="rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-md transition hover:bg-sky-400"
+            className="rounded-full bg-gradient-to-r from-sky-400 via-emerald-300 to-indigo-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-md transition hover:opacity-90"
           >
             View Projects
           </a>
+
+          {/* Normal button */}
           <a
             href="/contact"
             className="rounded-full border border-slate-600/80 px-6 py-3 text-base font-semibold text-slate-50 transition hover:border-sky-400"

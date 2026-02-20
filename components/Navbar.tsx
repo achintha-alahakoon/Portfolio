@@ -3,7 +3,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/about", label: "About" },
   { href: "/experience", label: "Experience" },
-  { href: "/techstack", label: "Tech Satck"},
+  { href: "/techstack", label: "Tech Satck" },
   { href: "/education", label: "Education" },
   { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
@@ -55,7 +55,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center py-6">
-        
+
         {/* LEFT: Name */}
         <div className="flex-1">
           <Link href="/" className="text-lg font-semibold tracking-tight">
@@ -66,12 +66,12 @@ export default function Navbar() {
         </div>
 
         {/* CENTER: Nav links */}
-        <nav className="flex flex-1 justify-center gap-6 text-lr font-medium text-slate-200">
+        <nav className="flex flex-1 justify-center gap-7 text-lr font-medium text-slate-200">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="transition-colors hover:text-white"
+              className="whitespace-nowrap transition-colors hover:text-white"
             >
               {item.label}
             </Link>
