@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/about", label: "About" },
@@ -52,6 +55,7 @@ const socialLinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center py-6">
@@ -66,16 +70,35 @@ export default function Navbar() {
         </div>
 
         {/* CENTER: Nav links */}
-        <nav className="flex flex-1 justify-center gap-7 text-lr font-medium text-slate-200">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="whitespace-nowrap transition-colors hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="flex flex-1 justify-center gap-6 text-lr font-medium">
+          {navItems.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href));
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="relative whitespace-nowrap px-1"
+              >
+                <span
+                  className={`transition-colors duration-300 ${isActive ? "text-white" : "text-slate-300 hover:text-white"
+                    }`}
+                >
+                  {item.label}
+                </span>
+
+                <span
+                  className={`absolute -bottom-2 left-0 h-[2px] w-full rounded-full 
+          bg-gradient-to-r from-sky-400 via-emerald-300 to-indigo-400
+          transition-transform duration-300 ease-in-out
+          ${isActive ? "scale-x-100" : "scale-x-0"}
+          origin-left`}
+                />
+              </Link>
+            );
+          })}
         </nav>
 
         {/* RIGHT: Social icons */}
