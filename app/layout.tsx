@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,11 +36,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950">{children}</main>
           <footer className="border-t border-slate-800 bg-slate-950/95">
-            <div className="mx-auto flex max-w-5xl justify-center px-6 py-4 text-xs text-slate-500">
-              <span>
-                Copyright &copy; {new Date().getFullYear()} Achintha Alahakoon
-              </span>
-            </div>
+            <Footer />
           </footer>
         </div>
       </body>
